@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Travel Agency</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Background Image and Gradient */
+    .bg-cover {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(39, 169, 221, 0.804),
+          rgba(0, 0, 0, 0.8)
+        ),
+        url('https://source.unsplash.com/1600x900/?travel');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Hero Section */
+    .bg-gradient-hero {
+      background: linear-gradient(to bottom right, #df471c, #d81dd5);
+    }
+
+    /* Headings and text */
+    .text-white {
+      color: #f0f4f8;
+    }
+
+    .text-gray-800 {
+      color: #1f2937;
+    }
+
+    .text-center {
+      padding: 20px;
+    }
+
+    .bg-white:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Service cards */
+    .bg-service {
+      background: linear-gradient(45deg, #b625eb, #c13520);
+      color: #f0f4f8;
+    }
+
+    .hover-scale:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .hover-shadow:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    /* Button styling */
+    .btn-gradient {
+      background-color: #1e40af;
+      background-image: linear-gradient(45deg, #2563eb, #1e40af);
+      transition: background-image 0.3s ease-in-out;
+    }
+
+    .btn-gradient:hover {
+      background-image: linear-gradient(45deg, #3b82f6, #2563eb);
+    }
+
+    /* Services Hover Effect */
+    .bg-service:hover {
+      background: linear-gradient(45deg, #eec335, #af1e1e);
+      transform: scale(1.05);
+    }
+
+    /* Footer gradient animation */
+    .footer-gradient {
+      background: linear-gradient(45deg, #183ea9, #eb25c0);
+    }
+
+    .footer-gradient:hover {
+      background-position: 100% 100%;
+    }
+
+    /* Animations */
+    .animate-bounce {
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    /* General utility classes */
+    .hover-scale:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .hover-shadow:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .text-white:hover {
+      color: #3b82f6;
+      transition: color 0.3s ease-in-out;
+    }
+
+    /* Testimonials styling */
+    .bg-testimonial {
+      background-color: #1e40af;
+    }
+
+    .bg-white:hover {
+      background-color: #f7f7f7;
+      transition: background-color 0.3s ease-in-out;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+  <!-- Hero Section -->
+  <section class="h-screen bg-gradient-hero">
+    <div class="flex items-center justify-center h-full bg-black bg-opacity-40">
+      <div class="text-center">
+        <h1 class="text-5xl md:text-6xl text-white font-bold mb-4 animate-bounce">Explore The World With Us</h1>
+        <p class="text-lg md:text-xl text-white mb-6">Discover new places and unforgettable experiences.</p>
+        <a href="#services" class="px-6 py-3 text-lg text-white btn-gradient rounded-md">Get Started</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-service p-6 rounded-lg shadow-lg text-center hover-scale hover-shadow">
+          <img src="pexels-photo-1174732.jpeg" alt="Beach" class="w-full h-40 object-cover mb-4 rounded-lg" />
+          <h3 class="text-xl font-semibold mb-2 text-white">Beach Getaways</h3>
+          <p class="text-white">Relax on the best beaches with all-inclusive packages.</p>
+        </div>
+        <div class="bg-service p-6 rounded-lg shadow-lg text-center hover-scale">
+          <img src="pexels-photo-6463067.jpeg" alt="Mountains" class="w-full h-40 object-cover mb-4 rounded-lg" />
+          <h3 class="text-xl font-semibold mb-2 text-white">Mountain Adventures</h3>
+          <p class="text-white">Discover scenic mountain views and hiking trails.</p>
+        </div>
+        <div class="bg-service p-6 rounded-lg shadow-lg text-center hover-scale">
+          <img src="pexels-photo-13556940.jpeg" alt="City Tours" class="w-full h-40 object-cover mb-4 rounded-lg" />
+          <h3 class="text-xl font-semibold mb-2 text-white">City Tours</h3>
+          <p class="text-white">Explore iconic cities and hidden gems with guided tours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-16 bg-testimonial text-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg hover-scale">
+          <p>"This trip was life-changing! The services provided were top-notch, and the experience was unforgettable!"</p>
+          <h4 class="mt-4 font-semibold">- John Doe</h4>
+        </div>
+        <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg hover-scale">
+          <p>"Amazing service and seamless booking. I would definitely recommend this travel agency to my friends."</p>
+          <h4 class="mt-4 font-semibold">- Jane Smith</h4>
+        </div>
+        <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg hover-scale">
+          <p>"Best vacation ever! The team was incredibly helpful and made everything so easy."</p>
+          <h4 class="mt-4 font-semibold">- Mark Johnson</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="py-8 footer-gradient text-white">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 Colorful Travel Agency. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Smooth Scroll Script -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>
